@@ -17,3 +17,7 @@ This is a script to add an insecure registry to all the nodes in a Tanzu Kuberne
 The dependencies for this script are curl, jq and sshpass. Usage is as follows:
 
 `tkg-insecure-registry.sh $name-cluster $namespace $url-registry`
+
+**Please note that this is done in the existing nodes of the cluster and the changes will not persist across cluster scale-up, repair and node replacement operations — anything where the nodes get recreated.
+
+**This should not be used in production clusters
